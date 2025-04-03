@@ -1,4 +1,8 @@
 import "./App.css";
+import Actions from "./game/buttons/Actions";
+import Pad from "./game/buttons/Pad";
+import StartSelect from "./game/buttons/StartSelect";
+import Screen from "./game/Screen";
 
 function App() {
   return (
@@ -6,90 +10,23 @@ function App() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         {/* container game */}
         <div
-          style={{ width: "350px", height: "500px", border:'2px black solid', borderRadius:'5px 5px 35px 5px'}}
+          style={{
+            width: "350px",
+            height: "500px",
+            border: "2px black solid",
+            borderRadius: "5px 5px 35px 5px",
+          }}
         >
           {/* container screen */}
-          <div
-            style={{
-              paddingTop: "5%",
-              paddingBottom: "25%",
-              justifyContent: "center",
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                width: "90%",
-                height: "200px",
-                backgroundColor: "olive",
-              }}
-            ></div>
-          </div>
+          <Screen />
           {/* container buttons */}
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
             {/* botones direcciones */}
-            <div
-              style={{
-                width: '60px',
-                height: '60px',
-                backgroundColor: 'black',
-              }}
-            >
-              <div>
-                <button
-                  style={{
-                    backgroundColor: 'blue',
-                    width: '40px',
-                    height: '40px',
-                  }}
-                ></button>
-              </div>
-              <div></div>
-            </div>
+            <Pad />
             {/* botones select y start */}
-            <div style={{ paddingTop: '30%' }}>
-              <div
-                style={{
-                  width: '60px',
-                  height: '60px',
-                  backgroundColor: 'gray',
-                  display:'flex',
-                  alignItems:'center',
-                }}
-              >
-                <button style={{width:'30px', height:'5px', transform: 'rotate(150deg)'}}></button><button style={{width:'30px', height:'5px', transform: 'rotate(150deg)'}}></button>
-              </div>
-            </div>
+            <StartSelect />
             {/* botones A Y B */}
-            <div
-              style={{
-                width: '60px',
-                height: '60px',
-                display: 'flex',
-                backgroundColor: 'black',
-              }}
-            >
-              <div>
-                <button
-                  style={{
-                    backgroundColor: '#821660',
-                    width: '40px',
-                    height: '40px',
-                    borderRadius: '50%',
-                  }}
-                ></button>
-              </div>
-              <div>
-                <button
-                  style={{
-                    backgroundColor: '#821660',
-                    width: '40px',
-                    height: '40px',
-                    borderRadius: '50%',
-                  }}
-                ></button>
-              </div>
-            </div>
+            <Actions />
           </div>
         </div>
       </div>

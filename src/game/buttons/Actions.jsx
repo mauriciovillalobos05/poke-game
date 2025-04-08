@@ -1,8 +1,10 @@
-import "../styles.css";
+import React from 'react';
+import '../styles.css';
+
 const Actions = () => {
   return (
-    <div className="back-btn">
-      <div>
+    <div className="container-action">
+      <div style={{ paddingTop: '36%' }}>
         <button className="action-btn"></button>
       </div>
       <div>

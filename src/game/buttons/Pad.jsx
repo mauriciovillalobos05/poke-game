@@ -1,11 +1,16 @@
 import "../styles.css";
-const Pad = () => {
+import React from 'react';
+
+const Pad = ({ handlePress }) => {
   return (
-    <div className="back-btn">
-      <div>
+    <div className="container-pad">
+      <button className="pad-btn" onClick={() => handlePress("up")}></button>
+      <div className="container-central">
+        <button className="pad-btn" onClick={() => handlePress("left")}></button>
         <button className="pad-btn"></button>
+        <button className="pad-btn" onClick={() => handlePress("right")}></button>
       </div>
-      <div></div>
+      <button className="pad-btn" onClick={() => handlePress("down")}></button>
     </div>
   );
 };
